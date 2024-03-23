@@ -1,0 +1,67 @@
+use trainingdb
+ 
+--create table for clients
+CREATE TABLE clients (client_ID varchar(4) PRIMARY KEY,
+    cname VARCHAR(40) NOT NULL,
+    address VARCHAR(30),
+    email VARCHAR(30) UNIQUE,
+    phone varchar(14),
+    business VARCHAR(20) NOT NULL
+)
+ 
+ 
+INSERT INTO Clients (client_ID, cname, address, email, phone, business)
+VALUES (1, 'ABC Manufacturing', '123 Main St', 'abc@example.com', 1234567890, 'Manufacturer'),
+(2, 'XYZ Consulting', '456 Elm St', 'xyz@example.com', 9876543210, 'Consultant')
+ 
+ 
+SELECT * FROM clients;
+ 
+--create the Departments table
+CREATE TABLE departments (deptno varchar(9) PRIMARY KEY,
+    dname VARCHAR(20) NOT NULL,
+    location VARCHAR(20))
+ 
+INSERT INTO Departments (Deptno, Dname, location)
+VALUES (10, 'Design', 'Pune'),
+(20, 'Development', 'Pune'),
+(30, 'Testing', 'Mumbai'),
+(40, 'Document', 'Mumbai')
+ 
+select * from departments
+ 
+ 
+--create the employees table
+CREATE TABLE employees (
+    empno varchar(5) PRIMARY KEY,
+    ename VARCHAR(20) NOT NULL,
+    job VARCHAR(20),
+    salary varchar(7) CHECK (Salary > 0),
+    deptno varchar(9) REFERENCES Departments(Deptno)
+)
+ 
+ 
+INSERT INTO employees (empno, ename, job, salary, deptno)
+VALUES (7001, 'Sandeep', 'Analyst', 25000, 10),
+(7002, 'Rajesh', 'Designer', 30000, 10),
+(7003, 'Madhav', 'Developer', 40000, 20),
+(7004, 'Manoj', 'Developer', 40000, 20),
+(7005, 'Abhay', 'Designer', 35000, 10),
+(7006, 'Uma', 'Tester', 30000, 30),
+(7007, 'Gita', 'Tech. Writer', 30000, 40),
+(7008, 'Priya', 'Tester', 35000, 30),
+(7009, 'Nutan', 'Developer', 45000, 20),
+(7010, 'Smita', 'Analyst', 20000, 10),
+(7011, 'Anand', 'Project Mgr', 65000, 10)
+ 
+SELECT * FROM Employees
+ 
+--create projects table
+create table projects (project_id varchar(3) primary key,
+descr varchar (30) not null,
+start_Date date,
+Planned_End_Date date,
+Actual_End_date date check (Actual_End_Date > Planned_End_Date),
+budget varchar(10) check (budget>0),
+client_ID varchar(4),
+CONSTRAINT fk_client_id foreign key (client_ID) references clients(client_id))
