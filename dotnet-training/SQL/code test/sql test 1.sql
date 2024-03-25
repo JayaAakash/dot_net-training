@@ -146,20 +146,3 @@ create table studentdetails( registerno int,
 	select gender, count(*) as total_students
 from studentdetails
 group by gender;
-
-create table EmpAudit1(Message varchar(max))
- 
-create trigger trgAuditDelete
-on Employee for delete
-as
-	begin
-		declare @id int
-		select @id=empno from deleted
- 
-		insert into Empaudit1
-		values('New Employee with Id  :  '+cast(@id as varchar(20))+
-		     	' is deleted  '+cast(getdate()as nvarchar(10)))
-	end
- 
-delete  from Employee where Empno=1111
-select * from Empaudit1
