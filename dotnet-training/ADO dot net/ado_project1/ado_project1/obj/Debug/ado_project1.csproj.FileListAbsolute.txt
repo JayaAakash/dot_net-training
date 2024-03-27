@@ -1,0 +1,7 @@
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\bin\Debug\ado_project1.exe.config
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\bin\Debug\ado_project1.exe
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\bin\Debug\ado_project1.pdb
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\obj\Debug\ado_project1.csproj.AssemblyReference.cache
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\obj\Debug\ado_project1.csproj.CoreCompileInputs.cache
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\obj\Debug\ado_project1.exe
+D:\dotnet-training\ADO dot net\ado_project1\ado_project1\obj\Debug\ado_project1.pdb
