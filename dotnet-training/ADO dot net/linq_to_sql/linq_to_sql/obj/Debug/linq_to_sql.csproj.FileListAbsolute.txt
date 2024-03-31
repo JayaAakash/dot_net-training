@@ -1,0 +1,7 @@
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\bin\Debug\linq_to_sql.exe.config
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\bin\Debug\linq_to_sql.exe
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\bin\Debug\linq_to_sql.pdb
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\obj\Debug\linq_to_sql.csproj.AssemblyReference.cache
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\obj\Debug\linq_to_sql.csproj.CoreCompileInputs.cache
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\obj\Debug\linq_to_sql.exe
+D:\dotnet-training\ADO dot net\linq_to_sql\linq_to_sql\obj\Debug\linq_to_sql.pdb

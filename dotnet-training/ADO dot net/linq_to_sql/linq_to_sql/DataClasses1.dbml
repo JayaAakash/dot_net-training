@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="trainingdb" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ICS-LT-841G3F3;Initial Catalog=trainingdb;Integrated Security=True" SettingsObjectName="linq_to_sql.Properties.Settings" SettingsPropertyName="trainingdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.clients" Member="clients">
+    <Type Name="client">
+      <Column Name="client_ID" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cname" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="bussiness" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.departments" Member="departments">
+    <Type Name="department">
+      <Column Name="deptno" Type="System.String" DbType="VarChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="location" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="department_employee" Member="employees" ThisKey="deptno" OtherKey="deptno" Type="employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employees" Member="employees">
+    <Type Name="employee">
+      <Column Name="empno" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ename" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="job" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="salary" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="deptno" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Association Name="department_employee" Member="department" ThisKey="deptno" OtherKey="deptno" Type="department" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
